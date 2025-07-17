@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clínica veterinaria profesional - Cuidamos de tu mascota">
+    <meta name="keywords" content="veterinario, mascotas, animales, salud animal, clínica veterinaria">
+    <title>Veterinarios - Inicio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1 data-text="site_title">Veterinarios</h1>
+                </div>
+                
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <select id="languageSelect">
+                        <option value="es">Español</option>
+                        <option value="ca">Català</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <!-- Navigation Menu -->
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="#inicio" class="nav-link active" data-text="nav_home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="servicios.html" class="nav-link" data-text="nav_services">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="equipo.html" class="nav-link" data-text="nav_team">Equipo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="instalaciones.html" class="nav-link" data-text="nav_facilities">Instalaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contacto.html" class="nav-link" data-text="nav_contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1 data-text="hero_title">Cuidamos de tu mascota como si fuera nuestra</h1>
+                <p data-text="hero_subtitle">Clínica veterinaria con más de 20 años de experiencia</p>
+                <a href="contacto.html" class="btn-primary" data-text="hero_cta">Contactar</a>
+            </div>
+        </section>
+
+        <!-- Services Preview -->
+        <section class="services-preview">
+            <div class="container">
+                <h2 data-text="services_title">Nuestros Servicios</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3 data-text="service_1_title">Consultas Generales</h3>
+                        <p data-text="service_1_desc">Revisiones y diagnósticos completos</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 data-text="service_2_title">Cirugía</h3>
+                        <p data-text="service_2_desc">Intervenciones quirúrgicas especializadas</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 data-text="service_3_title">Urgencias</h3>
+                        <p data-text="service_3_desc">Atención 24/7 para emergencias</p>
+                    </div>
+                </div>
+                <a href="servicios.html" class="btn-secondary" data-text="services_see_all">Ver todos los servicios</a>
+            </div>
+        </section>
+
+        <!-- About Preview -->
+        <section class="about-preview">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 data-text="about_title">Sobre Nosotros</h2>
+                        <p data-text="about_desc">Somos un equipo de profesionales dedicados al cuidado y bienestar de los animales. Nuestra experiencia y pasión nos convierte en la mejor opción para tu mascota.</p>
+                        <a href="equipo.html" class="btn-secondary" data-text="about_meet_team">Conoce nuestro equipo</a>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/team-preview.jpg" alt="Equipo veterinario" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-text="footer_contact">Contacto</h3>
+                    <p data-text="footer_address">Dirección: Calle Example, 123</p>
+                    <p data-text="footer_phone">Teléfono: +34 123 456 789</p>
+                    <p data-text="footer_email">Email: info@veterinarios.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-text="footer_hours">Horarios</h3>
+                    <p data-text="footer_weekdays">Lunes a Viernes: 9:00 - 20:00</p>
+                    <p data-text="footer_saturday">Sábado: 9:00 - 14:00</p>
+                    <p data-text="footer_sunday">Domingo: Urgencias</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-text="footer_copyright">&copy; 2025 Veterinarios. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <span>↑</span>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

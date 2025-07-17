@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con nosotros para citas y consultas veterinarias">
+    <title>Veterinarios - Contacto</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1><a href="index.html" data-text="site_title">Veterinarios</a></h1>
+                </div>
+                
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <select id="languageSelect">
+                        <option value="es">Español</option>
+                        <option value="ca">Català</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <!-- Navigation Menu -->
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link" data-text="nav_home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="servicios.html" class="nav-link" data-text="nav_services">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="equipo.html" class="nav-link" data-text="nav_team">Equipo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="instalaciones.html" class="nav-link" data-text="nav_facilities">Instalaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contacto.html" class="nav-link active" data-text="nav_contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 data-text="contact_page_title">Contacto</h1>
+                <p data-text="contact_page_subtitle">Estamos aquí para ayudarte. Contáctanos para citas, consultas o urgencias</p>
+            </div>
+        </section>
+
+        <!-- Contact Content -->
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    
+                    <!-- Contact Form -->
+                    <div class="contact-form-section">
+                        <h2 data-text="contact_form_title">Envíanos un Mensaje</h2>
+                        <p data-text="contact_form_subtitle">Completa el formulario y nos pondremos en contacto contigo lo antes posible</p>
+                        
+                        <form name="contact" method="POST" data-netlify="true" class="contact-form" netlify-honeypot="bot-field">
+                            <!-- Hidden field for bot detection -->
+                            <input type="hidden" name="form-name" value="contact">
+                            <div hidden>
+                                <label>No rellenar: <input name="bot-field"></label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name" data-text="form_label_name">Nombre completo *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" data-text="form_label_email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" data-text="form_label_phone">Teléfono</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pet-name" data-text="form_label_pet_name">Nombre de la mascota</label>
+                                <input type="text" id="pet-name" name="pet-name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="consultation-type" data-text="form_label_consultation_type">Tipo de consulta</label>
+                                <select id="consultation-type" name="consultation-type">
+                                    <option value="" data-text="form_option_select">Selecciona una opción</option>
+                                    <option value="general" data-text="form_option_general">Consulta general</option>
+                                    <option value="emergency" data-text="form_option_emergency">Urgencia</option>
+                                    <option value="surgery" data-text="form_option_surgery">Cirugía</option>
+                                    <option value="vaccination" data-text="form_option_vaccination">Vacunación</option>
+                                    <option value="other" data-text="form_option_other">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" data-text="form_label_message">Mensaje *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Describe tu consulta o el motivo de tu visita..."></textarea>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="privacy" required>
+                                    <span class="checkmark"></span>
+                                    <span data-text="form_privacy_text">Acepto la política de privacidad y el tratamiento de mis datos *</span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn-primary" data-text="form_submit_button">Enviar Mensaje</button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-info-section">
+                        <h2 data-text="contact_info_title">Información de Contacto</h2>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h3 data-text="contact_address_title">Dirección</h3>
+                                <p data-text="contact_address">Calle Example, 123<br>08001 Barcelona, España</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details">
+                                <h3 data-text="contact_phone_title">Teléfono</h3>
+                                <p><a href="tel:+34123456789" data-text="contact_phone">+34 123 456 789</a></p>
+                                <p class="contact-note" data-text="contact_phone_note">Llamadas de urgencia 24h</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">✉️</div>
+                            <div class="contact-details">
+                                <h3 data-text="contact_email_title">Email</h3>
+                                <p><a href="mailto:info@veterinarios.com" data-text="contact_email">info@veterinarios.com</a></p>
+                                <p class="contact-note" data-text="contact_email_note">Respuesta en 24h</p>
+                            </div>
+                        </div>
+
+                        <!-- Opening Hours -->
+                        <div class="opening-hours">
+                            <h3 data-text="contact_hours_title">Horarios de Atención</h3>
+                            <div class="hours-list">
+                                <div class="hour-item">
+                                    <span class="day" data-text="hours_weekdays">Lunes a Viernes</span>
+                                    <span class="time" data-text="hours_weekdays_time">9:00 - 20:00</span>
+                                </div>
+                                <div class="hour-item">
+                                    <span class="day" data-text="hours_saturday">Sábado</span>
+                                    <span class="time" data-text="hours_saturday_time">9:00 - 14:00</span>
+                                </div>
+                                <div class="hour-item">
+                                    <span class="day" data-text="hours_sunday">Domingo</span>
+                                    <span class="time emergency" data-text="hours_sunday_time">Solo Urgencias</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Emergency Notice -->
+                        <div class="emergency-notice">
+                            <h3 data-text="emergency_title">🚨 Urgencias</h3>
+                            <p data-text="emergency_text">Para emergencias fuera del horario de atención, llama al número principal. Tenemos servicio de urgencias 24 horas.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <div class="container">
+                <h2 data-text="map_title">Cómo Llegar</h2>
+                <div class="map-container">
+                    <!-- Placeholder for map - you can replace with Google Maps embed -->
+                    <div class="map-placeholder">
+                        <p data-text="map_placeholder">Mapa de ubicación</p>
+                        <p data-text="map_instructions">Estamos ubicados en el centro de Barcelona, con fácil acceso en transporte público y parking disponible.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-text="footer_contact">Contacto</h3>
+                    <p data-text="footer_address">Dirección: Calle Example, 123</p>
+                    <p data-text="footer_phone">Teléfono: +34 123 456 789</p>
+                    <p data-text="footer_email">Email: info@veterinarios.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-text="footer_hours">Horarios</h3>
+                    <p data-text="footer_weekdays">Lunes a Viernes: 9:00 - 20:00</p>
+                    <p data-text="footer_saturday">Sábado: 9:00 - 14:00</p>
+                    <p data-text="footer_sunday">Domingo: Urgencias</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-text="footer_copyright">&copy; 2025 Veterinarios. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <span>↑</span>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
