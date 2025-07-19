@@ -11,6 +11,10 @@ class ComponentsLoader {
     async init() {
         await this.loadAllComponents();
         this.setActiveNavigation();
+        
+        // Disparar evento personalizado cuando los componentes estén listos
+        const event = new CustomEvent('componentsLoaded');
+        document.dispatchEvent(event);
     }
 
     async loadAllComponents() {
@@ -34,10 +38,10 @@ class ComponentsLoader {
             this.insertComponent('header-placeholder', headerHTML);
             this.insertComponent('footer-placeholder', footerHTML);
 
-            console.log('✅ Components loaded successfully');
+            console.log('Components loaded successfully');
 
         } catch (error) {
-            console.error('❌ Error loading components:', error);
+            console.error('Error loading components:', error);
             this.fallbackToInlineComponents();
         }
     }
@@ -85,7 +89,7 @@ class ComponentsLoader {
     }
 
     fallbackToInlineComponents() {
-        console.log('🔄 Using inline components fallback');
+        console.log('Using inline components fallback');
         // Aquí podrías mantener el HTML inline como fallback
         // Por ahora solo mostramos un mensaje
         const headerPlaceholder = document.getElementById('header-placeholder');

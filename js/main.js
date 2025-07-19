@@ -87,11 +87,32 @@ class MultiLanguage {
     }
 
     setupLanguageSelector() {
+        // Selector móvil
         const languageSelect = document.getElementById('languageSelect');
+        // Selector desktop  
+        const languageSelectDesktop = document.getElementById('languageSelectDesktop');
+        
+        // Configurar selector móvil
         if (languageSelect) {
             languageSelect.value = this.currentLanguage;
             languageSelect.addEventListener('change', (e) => {
                 this.changeLanguage(e.target.value);
+                // Sincronizar con el selector desktop
+                if (languageSelectDesktop) {
+                    languageSelectDesktop.value = e.target.value;
+                }
+            });
+        }
+        
+        // Configurar selector desktop
+        if (languageSelectDesktop) {
+            languageSelectDesktop.value = this.currentLanguage;
+            languageSelectDesktop.addEventListener('change', (e) => {
+                this.changeLanguage(e.target.value);
+                // Sincronizar con el selector móvil
+                if (languageSelect) {
+                    languageSelect.value = e.target.value;
+                }
             });
         }
     }
@@ -517,8 +538,14 @@ class AccessibilityManager {
     setupAriaLabels() {
         // Agregar aria-labels dinámicamente donde sea necesario
         const languageSelector = document.getElementById('languageSelect');
+        const languageSelectDesktop = document.getElementById('languageSelectDesktop');
+        
         if (languageSelector) {
             languageSelector.setAttribute('aria-label', 'Seleccionar idioma');
+        }
+        
+        if (languageSelectDesktop) {
+            languageSelectDesktop.setAttribute('aria-label', 'Seleccionar idioma');
         }
 
         const scrollToTopButton = document.getElementById('scrollToTop');
@@ -532,8 +559,8 @@ class AccessibilityManager {
 // INITIALIZATION
 // ===================================
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Inicializar todos los módulos
+// Función para inicializar todos los módulos
+function initializeApp() {
     const multiLanguage = new MultiLanguage();
     const navigation = new Navigation();
     const scrollToTop = new ScrollToTop();
@@ -545,6 +572,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Log de inicialización para debug
     console.log('Veterinarios website initialized successfully');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Esperar a que los componentes se carguen antes de inicializar
+    document.addEventListener('componentsLoaded', () => {
+        initializeApp();
+    });
+    
+    // Fallback: si no hay componentes dinámicos, inicializar directamente
+    setTimeout(() => {
+        if (!document.querySelector('.header')) {
+            initializeApp();
+        }
+    }, 100);
 });
 
 // ===================================

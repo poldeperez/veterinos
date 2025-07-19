@@ -5,15 +5,6 @@
             <div class="nav-logo">
                 <h1><a href="index.html" data-text="site_title">Veterinarios</a></h1>
             </div>
-            
-            <!-- Language Selector -->
-            <div class="language-selector">
-                <select id="languageSelect">
-                    <option value="es">Español</option>
-                    <option value="ca">Català</option>
-                    <option value="en">English</option>
-                </select>
-            </div>
 
             <!-- Mobile Menu Toggle -->
             <div class="nav-toggle" id="mobile-menu">
@@ -39,7 +30,29 @@
                 <li class="nav-item">
                     <a href="contacto.html" class="nav-link" data-text="nav_contact">Contacto</a>
                 </li>
+                
+                <!-- Language Selector for Mobile (inside menu) -->
+                <li class="nav-item language-selector-mobile">
+                    <div class="language-selector">
+                        <select id="languageSelect">
+                            <option value="es">Español</option>
+                            <option value="ca">Català</option>
+                            <option value="en">English</option>
+                        </select>
+                    </div>
+                </li>
             </ul>
+            
+            <!-- Language Selector for Desktop (outside menu) -->
+            <div class="language-selector-desktop">
+                <div class="language-selector">
+                    <select id="languageSelectDesktop">
+                        <option value="es">Español</option>
+                        <option value="ca">Català</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+            </div>
         </div>
     </nav>
 </header>
