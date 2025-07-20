@@ -10,12 +10,12 @@
 
 :root {
     /* Colores principales */
-    --primary-color: #2c5aa0;
-    --primary-light: #4a7bc8;
-    --primary-dark: #1e3f73;
-    --secondary-color: #28a745;
-    --secondary-light: #34ce57;
-    --secondary-dark: #1e7e34;
+    --primary-color: #004851;
+    --primary-light: #116e7b;
+    --primary-dark: #012c31;
+    --secondary-color: #2c5aa0;
+    --secondary-light: #4a7bc8;
+    --secondary-dark: #1e3f73;
     
     /* Colores neutros */
     --white: #ffffff;
