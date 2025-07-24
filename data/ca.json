@@ -1,7 +1,11 @@
 {
   "site_title": "Veterinos",
   "meta_description": "Clínica veterinària professional - Cuidem de la teva mascota amb més de 20 anys d'experiència",
-  "page_title": "Veterinaris - Clínica Veterinària Professional",
+  "page_title": "Veterinos - Inici",
+  "services_page_title": "Veterinos - Serveis",
+  "team_page_title": "Veterinos - Equip", 
+  "facilities_page_title": "Veterinos - Instal·lacions",
+  "contact_page_title": "Veterinos - Contacte",
 
   "nav_home": "Inici",
   "nav_services": "Serveis",
@@ -26,7 +30,6 @@
   "about_desc": "Som un equip de professionals dedicats a la cura i benestar dels animals. La nostra experiència i passió ens converteix en la millor opció per a la teva mascota.",
   "about_meet_team": "Coneix el nostre equip",
 
-  "services_page_title": "Els Nostres Serveis",
   "services_page_subtitle": "Oferim una àmplia gamma de serveis veterinaris per a la cura integral de la teva mascota",
 
   "service_detail_1_title": "Consultes Generals",
@@ -69,7 +72,6 @@
   "services_cta_subtitle": "No dubtis a contactar-nos per qualsevol consulta sobre la salut de la teva mascota",
   "services_cta_button": "Sol·licitar Cita",
 
-  "team_page_title": "El Nostre Equip",
   "team_page_subtitle": "Professionals dedicats a la cura i benestar de la teva mascota",
 
   "team_intro_title": "Experiència i Passió",
@@ -111,7 +113,6 @@
   "value_3_title": "Proximitat",
   "value_3_desc": "Relació estreta amb els propietaris per a la millor cura",
 
-  "facilities_page_title": "Les Nostres Instal·lacions",
   "facilities_page_subtitle": "Espais moderns i tecnologia avançada per a la millor cura veterinària",
 
   "facilities_overview_title": "Tecnologia i Comoditat",
@@ -167,7 +168,6 @@
   "tour_cta_subtitle": "Vine a visitar-nos i descobreix per què som la millor opció per a la cura de la teva mascota",
   "tour_cta_button": "Sol·licitar Visita",
 
-  "contact_page_title": "Contacte",
   "contact_page_subtitle": "Som aquí per ajudar-te. Contacta'ns per a cites, consultes o urgències",
 
   "contact_form_title": "Envia'ns un Missatge",
@@ -222,7 +222,7 @@
   "footer_weekdays": "Dilluns a Divendres: 9:00 - 20:00",
   "footer_saturday": "Dissabte: 9:00 - 14:00",
   "footer_sunday": "Diumenge: Urgències",
-  "footer_copyright": "&copy; 2025 Veterinaris. Tots els drets reservats.",
+  "footer_copyright": "© 2025 Veterinos. Tots els drets reservats.",
   "footer_social": "Segueix-nos",
   "footer_instagram": "Instagram"
 }

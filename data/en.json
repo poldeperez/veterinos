@@ -1,7 +1,11 @@
 {
   "site_title": "Veterinos",
   "meta_description": "Professional veterinary clinic - We care for your pet with over 20 years of experience",
-  "page_title": "Veterinarians - Professional Veterinary Clinic",
+  "page_title": "Veterinos - Home",
+  "services_page_title": "Veterinos - Services",
+  "team_page_title": "Veterinos - Team", 
+  "facilities_page_title": "Veterinos - Facilities",
+  "contact_page_title": "Veterinos - Contact",
 
   "nav_home": "Home",
   "nav_services": "Services",
@@ -26,7 +30,6 @@
   "about_desc": "We are a team of professionals dedicated to the care and welfare of animals. Our experience and passion make us the best choice for your pet.",
   "about_meet_team": "Meet our team",
 
-  "services_page_title": "Our Services",
   "services_page_subtitle": "We offer a wide range of veterinary services for comprehensive care of your pet",
 
   "service_detail_1_title": "General Consultations",
@@ -69,7 +72,6 @@
   "services_cta_subtitle": "Don't hesitate to contact us for any consultation about your pet's health",
   "services_cta_button": "Request Appointment",
 
-  "team_page_title": "Our Team",
   "team_page_subtitle": "Professionals dedicated to the care and welfare of your pet",
 
   "team_intro_title": "Experience and Passion",
@@ -111,7 +113,6 @@
   "value_3_title": "Closeness",
   "value_3_desc": "Close relationship with owners for the best care",
 
-  "facilities_page_title": "Our Facilities",
   "facilities_page_subtitle": "Modern spaces and advanced technology for the best veterinary care",
 
   "facilities_overview_title": "Technology and Comfort",
@@ -167,7 +168,6 @@
   "tour_cta_subtitle": "Come visit us and discover why we are the best option for your pet's care",
   "tour_cta_button": "Request Visit",
 
-  "contact_page_title": "Contact",
   "contact_page_subtitle": "We are here to help you. Contact us for appointments, consultations or emergencies",
 
   "contact_form_title": "Send us a Message",
@@ -222,7 +222,7 @@
   "footer_weekdays": "Monday to Friday: 9:00 - 20:00",
   "footer_saturday": "Saturday: 9:00 - 14:00",
   "footer_sunday": "Sunday: Emergency",
-  "footer_copyright": "&copy; 2025 Veterinarians. All rights reserved.",
+  "footer_copyright": "© 2025 Veterinos. All rights reserved.",
   "footer_social": "Follow us",
   "footer_instagram": "Instagram"
 }

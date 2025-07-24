@@ -80,10 +80,6 @@ class MultiLanguage {
                 metaDescription.content = this.translations.meta_description;
             }
         }
-
-        if (this.translations.page_title) {
-            document.title = this.translations.page_title;
-        }
     }
 
     setupLanguageSelector() {

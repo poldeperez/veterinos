@@ -1,7 +1,11 @@
 {
   "site_title": "Veterinos",
   "meta_description": "Clínica veterinaria profesional - Cuidamos de tu mascota con más de 20 años de experiencia",
-  "page_title": "Veterinarios - Clínica Veterinaria Profesional",
+  "page_title": "Veterinos - Inicio",
+  "services_page_title": "Veterinos - Servicios",
+  "team_page_title": "Veterinos - Equipo", 
+  "facilities_page_title": "Veterinos - Instalaciones",
+  "contact_page_title": "Veterinos - Contacto",
 
   "nav_home": "Inicio",
   "nav_services": "Servicios",
@@ -26,7 +30,6 @@
   "about_desc": "Somos un equipo de profesionales dedicados al cuidado y bienestar de los animales. Nuestra experiencia y pasión nos convierte en la mejor opción para tu mascota.",
   "about_meet_team": "Conoce nuestro equipo",
 
-  "services_page_title": "Nuestros Servicios",
   "services_page_subtitle": "Ofrecemos una amplia gama de servicios veterinarios para el cuidado integral de tu mascota",
 
   "service_detail_1_title": "Consultas Generales",
@@ -69,7 +72,6 @@
   "services_cta_subtitle": "No dudes en contactarnos para cualquier consulta sobre la salud de tu mascota",
   "services_cta_button": "Solicitar Cita",
 
-  "team_page_title": "Nuestro Equipo",
   "team_page_subtitle": "Profesionales dedicados al cuidado y bienestar de tu mascota",
 
   "team_intro_title": "Experiencia y Pasión",
@@ -111,7 +113,6 @@
   "value_3_title": "Cercanía",
   "value_3_desc": "Relación estrecha con los propietarios para el mejor cuidado",
 
-  "facilities_page_title": "Nuestras Instalaciones",
   "facilities_page_subtitle": "Espacios modernos y tecnología avanzada para el mejor cuidado veterinario",
 
   "facilities_overview_title": "Tecnología y Comodidad",
@@ -167,7 +168,6 @@
   "tour_cta_subtitle": "Ven a visitarnos y descubre por qué somos la mejor opción para el cuidado de tu mascota",
   "tour_cta_button": "Solicitar Visita",
 
-  "contact_page_title": "Contacto",
   "contact_page_subtitle": "Estamos aquí para ayudarte. Contáctanos para citas, consultas o urgencias",
 
   "contact_form_title": "Envíanos un Mensaje",
@@ -222,7 +222,7 @@
   "footer_weekdays": "Lunes a Viernes: 9:00 - 20:00",
   "footer_saturday": "Sábado: 9:00 - 14:00",
   "footer_sunday": "Domingo: Urgencias",
-  "footer_copyright": "&copy; 2025 Veterinarios. Todos los derechos reservados.",
+  "footer_copyright": "© 2025 Veterinos. Todos los derechos reservados.",
   "footer_social": "Síguenos",
   "footer_instagram": "Instagram"
 }
