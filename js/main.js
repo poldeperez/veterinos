@@ -567,35 +567,85 @@ function initializeApp() {
     const accessibilityManager = new AccessibilityManager();
 
     // Log de inicialización para debug
-    console.log('Veterinarios website initialized successfully');
+    console.log('Veterinos website initialized successfully');
+}
+
+// ===================================
+// BANNER AND HEADER SCROLL BEHAVIOR
+// ===================================
+
+function initializeBannerScrollBehavior() {
+    // Only run on pages with banner
+    if (!document.body.classList.contains('has-banner')) return;
+    
+    const banner = document.querySelector('.top-banner');
+    const header = document.querySelector('.header');
+    
+    if (!banner || !header) return;
+    
+    // Only apply on desktop (when banner is visible)
+    if (window.innerWidth < 1024) return;
+    
+    let bannerHeight = banner.offsetHeight;
+    let ticking = false;
+    
+    function updateHeaderPosition() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Calculate the new position: starts at bannerHeight, goes to 0
+        // When scrollTop = 0, header is at bannerHeight
+        // When scrollTop >= bannerHeight, header is at 0
+        let newTopPosition = Math.max(0, bannerHeight - scrollTop);
+        
+        // Apply the position directly
+        header.style.top = newTopPosition + 'px';
+        
+        ticking = false;
+    }
+    
+    function handleScroll() {
+        if (!ticking) {
+            requestAnimationFrame(updateHeaderPosition);
+            ticking = true;
+        }
+    }
+    
+    // Update banner height on resize
+    function handleResize() {
+        if (window.innerWidth >= 1024) {
+            bannerHeight = banner.offsetHeight;
+            updateHeaderPosition(); // Re-check position immediately
+        } else {
+            // On mobile, reset to default position
+            header.style.top = '0px';
+        }
+    }
+    
+    // Add event listeners
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleResize);
+    
+    // Initial check
+    updateHeaderPosition();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     // Esperar a que los componentes se carguen antes de inicializar
     document.addEventListener('componentsLoaded', () => {
         initializeApp();
+        initializeBannerScrollBehavior();
     });
     
     // Fallback: si no hay componentes dinámicos, inicializar directamente
     setTimeout(() => {
         if (!document.querySelector('.header')) {
             initializeApp();
+        } else {
+            initializeBannerScrollBehavior();
         }
     }, 100);
 });
 
 // ===================================
-// SERVICE WORKER (opcional)
+// END OF SCRIPT
 // ===================================
-
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-            .then((registration) => {
-                console.log('SW registered: ', registration);
-            })
-            .catch((registrationError) => {
-                console.log('SW registration failed: ', registrationError);
-            });
-    });
-}

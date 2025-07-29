@@ -17,7 +17,7 @@
         <!-- Page Header -->
         <section class="page-header">
             <div class="container">
-                <h1 data-text="contact_page_title">Contacto</h1>
+                <h1 data-text="nav_contact">Contacto</h1>
                 <p data-text="contact_page_subtitle">Estamos aquí para ayudarte. Contáctanos para citas, consultas o urgencias</p>
             </div>
         </section>
@@ -26,7 +26,6 @@
         <section class="contact-content">
             <div class="container">
                 <div class="contact-grid">
-                    
                     <!-- Contact Form -->
                     <div class="contact-form-section">
                         <h2 data-text="contact_form_title">Envíanos un Mensaje</h2>
@@ -60,18 +59,6 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="consultation-type" data-text="form_label_consultation_type">Tipo de consulta</label>
-                                <select id="consultation-type" name="consultation-type">
-                                    <option value="" data-text="form_option_select">Selecciona una opción</option>
-                                    <option value="general" data-text="form_option_general">Consulta general</option>
-                                    <option value="emergency" data-text="form_option_emergency">Urgencia</option>
-                                    <option value="surgery" data-text="form_option_surgery">Cirugía</option>
-                                    <option value="vaccination" data-text="form_option_vaccination">Vacunación</option>
-                                    <option value="other" data-text="form_option_other">Otro</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
                                 <label for="message" data-text="form_label_message">Mensaje *</label>
                                 <textarea id="message" name="message" rows="5" required placeholder="Describe tu consulta o el motivo de tu visita..."></textarea>
                             </div>
@@ -96,7 +83,8 @@
                             <div class="contact-icon">📍</div>
                             <div class="contact-details">
                                 <h3 data-text="contact_address_title">Dirección</h3>
-                                <p data-text="contact_address">Calle Example, 123<br>08001 Barcelona, España</p>
+                                <p data-text="contact_address">Av. Corts Catalanes 2</p>
+                                <p>08173 Sant Cugat del Vallès</p>
                             </div>
                         </div>
 
@@ -104,8 +92,7 @@
                             <div class="contact-icon">📞</div>
                             <div class="contact-details">
                                 <h3 data-text="contact_phone_title">Teléfono</h3>
-                                <p><a href="tel:+34123456789" data-text="contact_phone">+34 123 456 789</a></p>
-                                <p class="contact-note" data-text="contact_phone_note">Llamadas de urgencia 24h</p>
+                                <p><a href="tel:+34935897141" data-text="contact_phone">+34 935 897 141</a></p>
                             </div>
                         </div>
 
@@ -113,8 +100,7 @@
                             <div class="contact-icon">✉️</div>
                             <div class="contact-details">
                                 <h3 data-text="contact_email_title">Email</h3>
-                                <p><a href="mailto:info@veterinarios.com" data-text="contact_email">info@veterinarios.com</a></p>
-                                <p class="contact-note" data-text="contact_email_note">Respuesta en 24h</p>
+                                <p><a href="mailto:veterinos@veterinos.com">veterinos@veterinos.com</a></p>
                             </div>
                         </div>
 
@@ -123,24 +109,10 @@
                             <h3 data-text="contact_hours_title">Horarios de Atención</h3>
                             <div class="hours-list">
                                 <div class="hour-item">
-                                    <span class="day" data-text="hours_weekdays">Lunes a Viernes</span>
-                                    <span class="time" data-text="hours_weekdays_time">9:00 - 20:00</span>
-                                </div>
-                                <div class="hour-item">
-                                    <span class="day" data-text="hours_saturday">Sábado</span>
-                                    <span class="time" data-text="hours_saturday_time">9:00 - 14:00</span>
-                                </div>
-                                <div class="hour-item">
-                                    <span class="day" data-text="hours_sunday">Domingo</span>
-                                    <span class="time emergency" data-text="hours_sunday_time">Solo Urgencias</span>
+                                    <span class="day" data-text="hours_weekdays">Lunes a Sábado</span>
+                                    <span class="time" data-text="hours_weekdays_time">8:00 - 21:00</span>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- Emergency Notice -->
-                        <div class="emergency-notice">
-                            <h3 data-text="emergency_title">🚨 Urgencias</h3>
-                            <p data-text="emergency_text">Para emergencias fuera del horario de atención, llama al número principal. Tenemos servicio de urgencias 24 horas.</p>
                         </div>
                     </div>
 
@@ -153,11 +125,17 @@
             <div class="container">
                 <h2 data-text="map_title">Cómo Llegar</h2>
                 <div class="map-container">
-                    <!-- Placeholder for map - you can replace with Google Maps embed -->
-                    <div class="map-placeholder">
-                        <p data-text="map_placeholder">Mapa de ubicación</p>
-                        <p data-text="map_instructions">Estamos ubicados en el centro de Barcelona, con fácil acceso en transporte público y parking disponible.</p>
-                    </div>
+                    <!-- Google Maps embed -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2697.3857175872827!2d2.094689675527488!3d41.4758659905031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a496d96157229d%3A0xe65c475f90a88cf3!2sVeterinos!5e1!3m2!1ses!2ses!4v1753735775748!5m2!1ses!2ses"
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Veterinos - Av. Corts Catalanes 2, Sant Cugat del Vallès">
+                    </iframe>
                 </div>
             </div>
         </section>

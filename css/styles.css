@@ -153,6 +153,88 @@ a:hover {
 }
 
 /* ===================================
+   TOP BANNER
+   =================================== */
+
+.top-banner {
+    background-color: var(--white);
+    color: var(--dark-gray);
+    padding: 0.25rem 0;
+    position: relative;
+    z-index: 1001;
+    border-bottom: 1px solid var(--light-gray); /* Add subtle border */
+}
+
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    min-height: 60px; /* Ensure minimum height for proper spacing */
+}
+
+.banner-left {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    margin-left: -10px;
+}
+
+.banner-logo {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.banner-right {
+    flex: 0 0 auto;
+    margin-right: 0; /* Asegurar que esté pegado al borde derecho */
+}
+
+.banner-contact-info {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.banner-phone,
+.banner-email,
+.banner-whatsapp,
+.banner-instagram {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    transition: all 0.3s ease;
+    font-weight: var(--font-weight-medium);
+}
+
+.banner-phone:hover,
+.banner-email:hover,
+.banner-whatsapp:hover,
+.banner-instagram:hover {
+    color: var(--primary-light);
+    transform: translateY(-1px);
+}
+
+.banner-whatsapp svg,
+.banner-instagram svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Hide banner on mobile and tablet */
+@media (max-width: 1023px) {
+    .top-banner {
+        display: none;
+    }
+}
+
+/* ===================================
    HEADER Y NAVEGACIÓN
    =================================== */
 
@@ -160,10 +242,23 @@ a:hover {
     background-color: var(--white);
     box-shadow: var(--box-shadow);
     position: fixed;
-    top: 0;
+    top: 0; /* Default position for all pages */
     left: 0;
     right: 0;
     z-index: 1000;
+    transition: none; /* Remove transition for smooth scroll behavior */
+}
+
+/* Only on index page with banner - header starts below banner on desktop */
+.has-banner .header {
+    top: 64px; /* Adjusted: 60px min-height + 4px padding (0.25rem * 2) + 1px border */
+}
+
+/* Hide banner on mobile and tablet - header goes back to top */
+@media (max-width: 1023px) {
+    .has-banner .header {
+        top: 0;
+    }
 }
 
 .navbar {
@@ -177,6 +272,12 @@ a:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
+}
+
+.header-logo {
+    height: 30px;
+    width: auto;
+    display: block;
 }
 
 .nav-logo h1 {
@@ -258,12 +359,25 @@ a:hover {
 .hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
     color: var(--white);
-    padding: calc(80px + var(--spacing-xxl)) 0 var(--spacing-xxl) 0;
+    padding: calc(var(--spacing-xxl)) 0 var(--spacing-xxl) 0; /* Default: 80px header only */
+    margin-top: 60px;
     text-align: center;
     min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Only on pages with banner - increase padding on desktop */
+.has-banner .hero {
+    padding: calc(140px + var(--spacing-xxl)) 0 var(--spacing-xxl) 0; /* 140px = 80px header + 60px banner */
+}
+
+/* Mobile - reset to default padding even on banner pages */
+@media (max-width: 1023px) {
+    .has-banner .hero {
+        padding: calc(80px + var(--spacing-xxl)) 0 var(--spacing-xxl) 0;
+    }
 }
 
 .hero-content h1 {
@@ -284,10 +398,21 @@ a:hover {
 
 .page-header {
     background-color: var(--light-gray);
-    padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl) 0;
+    padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl) 0; /* Default: 80px header only */
     text-align: center;
 }
 
+/* Only on pages with banner - increase padding on desktop */
+.has-banner .page-header {
+    padding: calc(140px + var(--spacing-xl)) 0 var(--spacing-xl) 0; /* 140px = 80px header + 60px banner */
+}
+
+/* Mobile - reset to default padding even on banner pages */
+@media (max-width: 1023px) {
+    .has-banner .page-header {
+        padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl) 0;
+    }
+}
 .page-header h1 {
     font-size: 2.5rem;
     margin-bottom: var(--spacing-sm);
@@ -385,7 +510,7 @@ section {
     background-color: var(--white);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--box-shadow);
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg);
     transition: var(--transition);
 }
 
@@ -395,9 +520,12 @@ section {
 }
 
 .service-icon {
-    font-size: 3rem;
-    margin-bottom: var(--spacing-md);
-    text-align: center;
+    height: 100px;
+    width: auto;
+    display: block;
+    margin-bottom: var(--spacing-lg);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .service-features {
@@ -456,7 +584,6 @@ section {
 
 .member-speciality {
     color: var(--gray);
-    font-style: italic;
     margin-bottom: var(--spacing-sm);
 }
 
@@ -482,6 +609,12 @@ section {
 .team-values h2 {
     text-align: center;
     margin-bottom: var(--spacing-xl);
+}
+
+.section-divider {
+    margin: var(--spacing-xl) 0;
+    border-bottom: 1px solid #e0e0e0;
+    opacity: 0.6;
 }
 
 .values-grid {
@@ -519,23 +652,33 @@ section {
     gap: var(--spacing-lg);
 }
 
+.facility-image {
+    padding: 0; /* Ensure no padding around image */
+    margin: 0;  /* Ensure no margin around image */
+}
+
 .facility-image img {
     width: 100%;
     height: 250px;
     object-fit: cover;
+    display: block; /* Remove default inline spacing below images */
 }
 
 .facility-content {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
+}
+
+.facility-content p {
+    margin-bottom: var(--spacing-xs); /* Reduce space below paragraphs in facility cards */
 }
 
 .facility-features {
     list-style: none;
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-xs); 
 }
 
 .facility-features li {
-    padding: var(--spacing-xs) 0;
+    padding: 0.25rem 0; /* Reduced from var(--spacing-xs) for more compact spacing */
     position: relative;
     padding-left: var(--spacing-md);
 }
@@ -656,6 +799,19 @@ section {
     margin-top: var(--spacing-xs);
 }
 
+/* Contact links styling */
+.contact-details a {
+    color: var(--secondary-light);
+    text-decoration: underline;
+    font-weight: var(--font-weight-medium);
+    transition: var(--transition-fast);
+}
+
+.contact-details a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
 .contact-note {
     font-size: var(--font-size-sm);
     color: var(--gray);
@@ -711,6 +867,13 @@ section {
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     box-shadow: var(--box-shadow);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: var(--border-radius-lg);
 }
 
 .map-placeholder {
