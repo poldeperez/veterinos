@@ -314,7 +314,7 @@ a:hover {
 
 .language-selector select {
     padding: var(--spacing-xs) var(--spacing-sm);
-    border: 1px solid var(--gray);
+    border: 1px solid #89b0b4;
     border-radius: var(--border-radius-sm);
     background-color: var(--white);
     color: var(--dark-gray);
@@ -366,6 +366,73 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hero Carousel Styles */
+.hero-carousel {
+    background: none; /* Remove default gradient for carousel */
+}
+
+.hero-slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.hero-indicators {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 3;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator:hover,
+.indicator.active {
+    background: var(--white);
+    border-color: var(--white);
 }
 
 /* Only on pages with banner - increase padding on desktop */
@@ -402,14 +469,43 @@ a:hover {
     text-align: center;
 }
 
+/* Page header with background image - replaces page-header for image backgrounds */
+.page-header-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--white);
+    padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.page-header-bg h1 {
+    color: var(--white);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.page-header-bg p {
+    color: var(--white);
+    opacity: 0.9;
+}
+
 /* Only on pages with banner - increase padding on desktop */
 .has-banner .page-header {
     padding: calc(140px + var(--spacing-xl)) 0 var(--spacing-xl) 0; /* 140px = 80px header + 60px banner */
 }
 
+.has-banner .page-header-bg {
+    padding: calc(140px + var(--spacing-xl)) 0 var(--spacing-xl) 0;
+}
+
 /* Mobile - reset to default padding even on banner pages */
 @media (max-width: 1023px) {
     .has-banner .page-header {
+        padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl) 0;
+    }
+    
+    .has-banner .page-header-bg {
         padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl) 0;
     }
 }
@@ -799,6 +895,14 @@ section {
     margin-top: var(--spacing-xs);
 }
 
+.contact-icon-img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: var(--spacing-xs);
+    flex-shrink: 0; /* Prevent image from shrinking */
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
 /* Contact links styling */
 .contact-details a {
     color: var(--secondary-light);
@@ -922,6 +1026,74 @@ section {
 .virtual-tour-cta .btn-primary:hover {
     background-color: var(--light-gray);
     color: var(--primary-dark);
+}
+
+/* ===================================
+   SUCCESS PAGE
+   =================================== */
+
+.success-message {
+    padding: var(--spacing-xxl) 0;
+    text-align: center;
+}
+
+.success-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: var(--spacing-xxl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow-lg);
+}
+
+.success-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.success-content h2 {
+    color: var(--success);
+    margin-bottom: var(--spacing-md);
+    font-size: 2rem;
+}
+
+.success-content p {
+    font-size: var(--font-size-lg);
+    color: var(--gray);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
+.next-steps {
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--light-gray);
+}
+
+.next-steps h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.action-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .action-buttons .btn-primary,
+    .action-buttons .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
 /* ===================================
@@ -1084,6 +1256,21 @@ section {
 
     .hero-content h1 {
         font-size: 2rem;
+    }
+
+    /* Hero carousel responsive */
+    .hero {
+        min-height: 70vh;
+    }
+    
+    .hero-indicators {
+        bottom: 20px;
+        gap: 8px;
+    }
+    
+    .indicator {
+        width: 10px;
+        height: 10px;
     }
 
     .about-content {

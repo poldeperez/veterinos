@@ -15,7 +15,7 @@
     <!-- Main Content -->
     <main>
         <!-- Page Header -->
-        <section class="page-header">
+        <section class="page-header-bg" style="background-image: linear-gradient(rgba(0, 72, 81, 0.7), rgba(0, 72, 81, 0.7)), url('images/contact/contact-hero-bg.jpg');">
             <div class="container">
                 <h1 data-text="nav_contact">Contacto</h1>
                 <p data-text="contact_page_subtitle">Estamos aquí para ayudarte. Contáctanos para citas, consultas o urgencias</p>
@@ -31,7 +31,7 @@
                         <h2 data-text="contact_form_title">Envíanos un Mensaje</h2>
                         <p data-text="contact_form_subtitle">Completa el formulario y nos pondremos en contacto contigo lo antes posible</p>
                         
-                        <form name="contact" method="POST" data-netlify="true" class="contact-form" netlify-honeypot="bot-field">
+                        <form name="contact" method="POST" data-netlify="true" class="contact-form" netlify-honeypot="bot-field" action="/success.html">
                             <!-- Hidden field for bot detection -->
                             <input type="hidden" name="form-name" value="contact">
                             <div hidden>
@@ -92,7 +92,15 @@
                             <div class="contact-icon">📞</div>
                             <div class="contact-details">
                                 <h3 data-text="contact_phone_title">Teléfono</h3>
-                                <p><a href="tel:+34935897141" data-text="contact_phone">+34 935 897 141</a></p>
+                                <p><a href="tel:+34935897141">+34 935 897 141</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <img src="images/whatsapp-icon.png" alt="WhatsApp" class="contact-icon-img">
+                            <div class="contact-details">
+                                <h3>Whatsapp</h3>
+                                <p><a href="https://wa.me/34680597289?text=Hola,%20voldria%20fer%20una%20consulta" target="_blank" rel="noopener noreferrer">680 597 289</a></p>
                             </div>
                         </div>
 

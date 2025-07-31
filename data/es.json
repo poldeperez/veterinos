@@ -14,7 +14,7 @@
   "nav_contact": "Contacto",
 
   "hero_title": "Cuidamos de tu mascota como si fuera nuestra",
-  "hero_subtitle": "Clínica veterinaria con más de 20 años de experiencia",
+  "hero_subtitle": "Clínica veterinaria con experiencia desde 1996",
   "hero_cta": "Contactar",
 
   "services_title": "Nuestros Servicios",
@@ -86,7 +86,10 @@
   "team_member_1_desc": "Graduada por la Universidad Autónoma de Barcelona. Máster en Dirección de Clínicas Veterinarias por el IESE. Miembro del grupo de Cardiología y Urgencias y Cuidados Intensivos de AVEPA. Responsable del servicio de cirugía, cardiorespiratorio y oncología.",
   "team_member_1_education": "Universidad Autónoma de Barcelona",
 
-  "team_member_2_title": "Veterinario Especialista",
+  "veterinaria_esp": "Veterinaria Especialista",
+  "veterinario_esp": "Veterinario Especialista",
+  "veterinaria_gen": "Veterinaria Generalista",
+  "veterinario_gen": "Veterinario Generalista",
   "team_member_2_desc": "Graduada por la Universidad CEU Cardenal Herrera. Postgrado en Cirugía General de pequeños animales. Sus áreas de interés son la cirugía de tejidos blandos, diagnóstico de imagen y neurología. Responsable del servicio de hospitalización.",
   "team_member_3_desc": "Graduada por la Universidad Autónoma de Barcelona. Sus áreas de interés son la medicina interna y la nutrición.",
   "team_member_4_desc": "Graduado por la Universidad Autónoma de Barcelona. Sus áreas de interés son la medicina interna y la dermatología.",
@@ -176,7 +179,6 @@
   "contact_address_title": "Dirección",
   "contact_address": "Av. Corts Catalanes 2",
   "contact_phone_title": "Teléfono",
-  "contact_phone": "+34 935 897 141",
   "contact_email_title": "Email",
 
   "contact_hours_title": "Horario de Atención",

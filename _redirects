@@ -1,0 +1,6 @@
+# Redirect rules for clean URLs
+/inicio /
+/home /
+
+# 404 fallback
+/* /index.html 200

@@ -14,7 +14,7 @@
   "nav_contact": "Contact",
 
   "hero_title": "We care for your pet as if it were our own",
-  "hero_subtitle": "Veterinary clinic with over 20 years of experience",
+  "hero_subtitle": "Veterinary clinic with experience since 1996",
   "hero_cta": "Contact",
 
   "services_title": "Our Services",
@@ -84,7 +84,10 @@
   "team_member_1_desc": "Graduated from the Universitat Autònoma of Barcelona. Master's degree in Veterinary Clinic Management from IESE. Member of the Cardiology, Emergency and Intensive Care group at AVEPA. Head of the surgery, cardiorespiratory, and oncology departments.",
   "team_member_1_education": "Universitat Autònoma of Barcelona",
 
-  "team_member_2_title": "Specialist Veterinarian",
+  "veterinaria_esp": "Specialist Veterinarian",
+  "veterinario_esp": "Specialist Veterinarian",
+  "veterinaria_gen": "Generalist Veterinarian",
+  "veterinario_gen": "Generalist Veterinarian",
   "team_member_2_desc": "Graduated from CEU Cardenal Herrera University. Postgraduate in General Surgery for small animals. Areas of interest include soft tissue surgery, diagnostic imaging, and neurology. Responsible of the hospitalization service.",
   "team_member_3_desc": "Graduated from the Universitat Autónoma of Barcelona. Areas of interest are internal medicine and nutrition.",
   "team_member_4_desc": "Graduated from the UAB. Areas of interest are internal medicine and dermatology.",
@@ -184,9 +187,7 @@
   "contact_address_title": "Address",
   "contact_address": "Av. Corts Catalanes 2",
   "contact_phone_title": "Phone",
-  "contact_phone": "+34 935 897 141",
   "contact_email_title": "Email",
-  "contact_email": "veterinos@veterinos.com",
 
   "contact_hours_title": "Office Hours",
   "hours_weekdays": "Monday to Saturday",

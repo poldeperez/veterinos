@@ -14,7 +14,7 @@
   "nav_contact": "Contacte",
 
   "hero_title": "Cuidem de la teva mascota com si fos nostra",
-  "hero_subtitle": "Clínica veterinària amb més de 20 anys d'experiència",
+  "hero_subtitle": "Clínica veterinària amb experiència des de 1996",
   "hero_cta": "Contactar",
 
   "services_title": "Els Nostres Serveis",
@@ -82,11 +82,14 @@
 
   "team_page_subtitle": "Professionals dedicats a la cura i benestar de la teva mascota",
 
-  "team_member_1_title": "Directora de veterinaria",
+  "team_member_1_title": "Directora de veterinària",
   "team_member_1_desc": "Graduada per la Universitat Autònoma de Barcelona. Màster en Direcció de Clíniques Veterinàries per la IESE. Membre del grup de Cardiologia i Urgències i Cures Intensives d'AVEPA. Responsable del servei de cirurgia, cardiorespiratori i oncologia.",
   "team_member_1_education": "Universitat Autònoma de Barcelona",
 
-  "team_member_2_title": "Veterinari Especialista",
+  "veterinaria_esp": "Veterinària Especialista",
+  "veterinario_esp": "Veterinari Especialista",
+  "veterinaria_gen": "Veterinària Generalista",
+  "veterinario_gen": "Veterinari Generalista",
   "team_member_2_desc": "Graduada per la Universitat CEU Cardenal Herrera. Postgrau en Cirurgia General de petits animals. Les àrees d'interès són la cirurgia de teixits tous, diagnòstic per imatge i neurologia. Responsable del servei d'hospitalització.",
   "team_member_3_desc": "Graduada per la Universitat Autònoma de Barcelona. Les seves àrees d'interès són la medicina interna i la nutrició.",
   "team_member_4_desc": "Graduat per la Universitat Autònoma de Barcelona. Les àrees d'interès són la medicina interna i la dermatologia.",
@@ -186,7 +189,6 @@
   "contact_address_title": "Adreça",
   "contact_address": "Av. Corts Catalanes 2",
   "contact_phone_title": "Telèfon",
-  "contact_phone": "+34 935 897 141",
   "contact_email_title": "Email",
   "contact_email": "veterinos@veterinos.com",
 

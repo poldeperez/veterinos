@@ -1,0 +1,58 @@
+[build]
+  # No build command needed for static site
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Form handling configuration
+[[forms]]
+  name = "contact"
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Cache static assets
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+# Redirect rules for clean URLs (optional)
+[[redirects]]
+  from = "/inicio"
+  to = "/"
+  status = 301
+
+# Handle Spanish/Catalan/English routing
+[[redirects]]
+  from = "/es/*"
+  to = "/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/ca/*"
+  to = "/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/en/*"
+  to = "/:splat"
+  status = 200
