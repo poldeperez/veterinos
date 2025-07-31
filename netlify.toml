@@ -35,10 +35,53 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000"
 
-# Redirect rules for clean URLs (optional)
+# Redirect rules for clean URLs
 [[redirects]]
   from = "/inicio"
   to = "/"
+  status = 301
+
+# Clean URLs - Remove .html extension
+# Rewrite clean URLs to .html files (user sees clean URL)
+[[redirects]]
+  from = "/contacto"
+  to = "/contacto.html"
+  status = 200
+
+[[redirects]]
+  from = "/servicios"
+  to = "/servicios.html"
+  status = 200
+
+[[redirects]]
+  from = "/equipo"
+  to = "/equipo.html"
+  status = 200
+
+[[redirects]]
+  from = "/instalaciones"
+  to = "/instalaciones.html"
+  status = 200
+
+# Redirect .html URLs to clean URLs (SEO friendly)
+[[redirects]]
+  from = "/contacto.html"
+  to = "/contacto"
+  status = 301
+
+[[redirects]]
+  from = "/servicios.html"
+  to = "/servicios"
+  status = 301
+
+[[redirects]]
+  from = "/equipo.html"
+  to = "/equipo"
+  status = 301
+
+[[redirects]]
+  from = "/instalaciones.html"
+  to = "/instalaciones"
   status = 301
 
 # Handle Spanish/Catalan/English routing
