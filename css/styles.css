@@ -624,6 +624,15 @@ section {
     margin-right: auto;
 }
 
+.values-icon {
+    height: 75px;
+    width: auto;
+    display: block;
+    margin-bottom: var(--spacing-lg);
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .service-features {
     list-style: none;
     margin-top: var(--spacing-md);
