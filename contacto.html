@@ -31,13 +31,8 @@
                         <h2 data-text="contact_form_title">Envíanos un Mensaje</h2>
                         <p data-text="contact_form_subtitle">Completa el formulario y nos pondremos en contacto contigo lo antes posible</p>
                         
-                        <form name="contact" method="POST" action="https://formspree.io/f/xldllopk" class="contact-form">
-                            <!-- Hidden field for autoresponse -->
-                            <input type="hidden" name="_subject" value="Nueva consulta desde Veterinos">
-                            <input type="hidden" name="_autoresponse" value="Gracias por contactar con Veterinos. Hemos recibido tu consulta y nos pondremos en contacto contigo en un plazo de 24 horas. Si es urgente, llámanos al 935 897 141.">
-                            <input type="hidden" name="_next" value="https://veterinos.netlify.app/success.html">
-
-                            <!-- Hidden field for bot detection -->
+                        <form name="contact" method="POST" action="/.netlify/functions/contact" class="contact-form">
+                            <!-- Hidden field for bot detection (honeypot) -->
                             <input type="hidden" name="form-name" value="contact">
                             <div hidden>
                                 <label>No rellenar: <input name="bot-field"></label>
