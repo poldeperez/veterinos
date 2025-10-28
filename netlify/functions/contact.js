@@ -68,7 +68,7 @@ exports.handler = async (event) => {
     return { statusCode: 422, body: JSON.stringify({ errors }) };
   }
 
-  const subject = `Nuevo mensaje de contacto - ${name}`;
+  const subject = `Nuevo mensaje de contacto desde la web - ${name}`;
   const html = `
     <div style="font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.6;">
       <h2>Nuevo mensaje de contacto</h2>
@@ -113,7 +113,7 @@ exports.handler = async (event) => {
     // Redirect to success page for regular form POST
     return {
       statusCode: 303,
-      headers: { Location: "/success.html" },
+      headers: { Location: "/success" },
       body: "",
     };
   } catch (err) {

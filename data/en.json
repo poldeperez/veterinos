@@ -206,5 +206,15 @@
   "footer_weekdays": "Monday to Saturday: 8:00 - 21:00",
   "footer_copyright": "© 2025 Veterinos. All rights reserved.",
   "footer_social": "Follow us",
-  "footer_instagram": "Instagram"
+  "footer_instagram": "Instagram",
+
+  "success_page_title": "Message Sent - Veterinos",
+  "success_page_title2": "Message Sent!",
+  "success_page_subtitle": "Thank you for contacting us",
+  "success_message_title": "Your message has been sent successfully",
+  "success_message_info": "We have received your inquiry and will contact you as soon as possible, usually within 24 hours.",
+  "success_message_urgent": "If this is an emergency, please call us directly at 935 897 141.",
+  "success_next_steps_title": "What can you do now?",
+  "success_button_home": "Return to Home",
+  "success_button_services": "View Our Services"
 }

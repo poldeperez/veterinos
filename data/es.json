@@ -198,5 +198,15 @@
   "footer_weekdays": "Lunes a Sábado: 8:00 - 21:00",
   "footer_copyright": "© 2025 Veterinos. Todos los derechos reservados.",
   "footer_social": "Síguenos",
-  "footer_instagram": "Instagram"
+  "footer_instagram": "Instagram",
+
+  "success_page_title": "Mensaje Enviado - Veterinos",
+  "success_page_title2": "Mensaje Enviado!",
+  "success_page_subtitle": "Gracias por contactar con nosotros",
+  "success_message_title": "Tu mensaje ha sido enviado correctamente",
+  "success_message_info": "Hemos recibido tu consulta y nos pondremos en contacto contigo lo antes posible, normalmente en un plazo de 24 horas.",
+  "success_message_urgent": "Si es una urgencia, no dudes en llamarnos directamente al 935 897 141.",
+  "success_next_steps_title": "¿Qué puedes hacer ahora?",
+  "success_button_home": "Volver al Inicio",
+  "success_button_services": "Ver Nuestros Servicios"
 }

@@ -84,6 +84,17 @@
   to = "/instalaciones"
   status = 301
 
+# Success page clean URL
+[[redirects]]
+  from = "/success"
+  to = "/success.html"
+  status = 200
+
+[[redirects]]
+  from = "/success.html"
+  to = "/success"
+  status = 301
+
 # Handle Spanish/Catalan/English routing
 [[redirects]]
   from = "/es/*"
