@@ -10,15 +10,20 @@ class MultiLanguage {
     }
 
     async init() {
-        // Detectar idioma del navegador o localStorage
+        // Priority: savedLanguage > browserLanguage > default to Spanish
+        // Default to Spanish to ensure crawlers and first-time visitors see Spanish content
         const savedLanguage = localStorage.getItem('selectedLanguage');
         const browserLanguage = navigator.language.substring(0, 2);
         
         if (savedLanguage && ['es', 'ca', 'en'].includes(savedLanguage)) {
+            // User has explicitly chosen a language
             this.currentLanguage = savedLanguage;
-        } else if (['es', 'ca', 'en'].includes(browserLanguage)) {
+        } else if (browserLanguage === 'ca' || browserLanguage === 'en') {
+            // Only switch to ca/en if browser explicitly requests it
+            // This ensures Spanish is default for crawlers and unknown locales
             this.currentLanguage = browserLanguage;
         }
+        // else: keep default 'es' set in constructor
 
         // Cargar traducciones
         await this.loadTranslations();
